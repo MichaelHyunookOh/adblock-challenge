@@ -5,8 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="wrapper">
+        <div class="buttonWrapper">
+          <button class="tab-button active" style="border-top-left-radius: 10px;" data-id="general">General</button>
+          <button class="tab-button" data-id="form">Form</button>
+          <button class="tab-button" style="border-top-right-radius: 10px;" data-id="help">Help</button>
+        </div>
+        <div class="contentWrapper">
+          <h1>ABP Triple Tab test</h1>
+          
+          
+          <p class="content active" id="general">
+            Tab 2
+          </p>
+          <div class="content" id="form"> 
+              <h3>Pick your favorite monster</h3>
+            <form id="fav-monster-form">
+                <input type="radio" id="kraken" name="fav_monster" value="Kraken">
+                <label for="kraken"> Kraken </label><br>
+                <input type="radio" id="sasquatch" name="fav_monster"  value="Sasquatch">
+                <label for="sasquatch">Sasquatch</label><br>
+                <input type="radio" id="mothman" name="fav_monster"  value="Mothman">
+                <label for="mothman">Mothman</label><br>
+            </form>
+
+                <h3>Meet your favorite monster</h3>
+            <form id="meet-monster-form">
+                <label for="name">Your name</label>
+                <input class="monster-input" type="text" id="name" name="name">
+                <label for="address">Your address</label>
+                <input class="monster-input" type="text" id="address" name="address">
+                <input id="submit-form" type="submit" value="submit">
+            </form>
+        </div>
+          <p class="content" id="help">
+            Tab 3
+          </p>
+        </div>
+      </div>
+    <script src="main.js"></script>
 </body>
 </html>
