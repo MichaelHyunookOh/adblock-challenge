@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="buttonWrapper">
+        <div class="buttonWrapper" >
           <button class="tab-button active" style="border-top-left-radius: 10px;" data-id="general">General</button>
           <button class="tab-button" data-id="form">Form</button>
           <button class="tab-button" style="border-top-right-radius: 10px;" data-id="help">Help</button>
@@ -23,23 +23,30 @@
           </p>
           <div class="content" id="form"> 
               <h3>Pick your favorite monster</h3>
-            <form id="fav-monster-form">
-                <input type="radio" id="kraken" name="fav_monster" value="Kraken">
-                <label for="kraken"> Kraken </label><br>
-                <input type="radio" id="sasquatch" name="fav_monster"  value="Sasquatch">
-                <label for="sasquatch">Sasquatch</label><br>
-                <input type="radio" id="mothman" name="fav_monster"  value="Mothman">
-                <label for="mothman">Mothman</label><br>
-            </form>
+              <form onsubmit="return submitForms(this)"> 
+                <div id="fav-monster-form">
+                    <input type="radio" id="kraken" name="fav_monster" value="Kraken" required/>
+                    <label for="kraken"> Kraken </label><br>
+                    <input type="radio" id="sasquatch" name="fav_monster"  value="Sasquatch"/>
+                    <label for="sasquatch">Sasquatch</label><br>
+                    <input type="radio" id="mothman" name="fav_monster"  value="Mothman"/>
+                    <label for="mothman">Mothman</label><br>
+                </div>
+    
+                    <h3>Meet your favorite monster</h3>
+                <div id="meet-monster-form">
+                    <label for="name">Your name</label>
+                    <input class="name" type="text" id="name" name="meet-monster" required/>
+                    <label for="address">Your address</label>
+                    <input class="monster-input" type="text" id="address" name="address" required />
+                    
+                </div>
+                <input id="submit-form" type="submit" value="Submit" />
 
-                <h3>Meet your favorite monster</h3>
-            <form id="meet-monster-form">
-                <label for="name">Your name</label>
-                <input class="monster-input" type="text" id="name" name="name">
-                <label for="address">Your address</label>
-                <input class="monster-input" type="text" id="address" name="address">
-                <input id="submit-form" type="submit" value="submit">
-            </form>
+
+              </form>
+            
+            
         </div>
           <p class="content" id="help">
             Tab 3
