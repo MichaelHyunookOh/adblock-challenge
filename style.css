@@ -4,6 +4,7 @@
   background-color: white;
   display: flex;
   justify-content: space-between;
+  text-align: start;
 }
 
 .buttonWrapper {
@@ -47,7 +48,6 @@ button.active {
 
 p {
   text-align: left;
-  padding: 10px;
 }
 
 .contentWrapper {
